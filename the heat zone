@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Interactive Lesson on Heat and Temperature</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .quiz-option.correct, .game-option.correct {
+            background-color: #d1fae5;
+            border-color: #10b981;
+        }
+        .quiz-option.incorrect, .game-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .game-scenario {
+            background-color: #f3f4f6;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border: 2px solid #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-red-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-red-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 inline-block mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                  <path d="M9 4a1 1 0 011 1v1.134a4.002 4.002 0 012.28 2.285 1 1 0 11-1.731.998A2.002 2.002 0 0010 7.134V6a1 1 0 01-1-1z" />
+                  <path d="M10 12a2 2 0 100 4 2 2 0 000-4z" />
+                </svg>
+                The Heat Zone
+            </div>
+            <div>
+                <a href="#lesson" class="text-gray-600 hover:text-red-600 px-3 py-2">The Lesson</a>
+                <a href="#game" class="text-gray-600 hover:text-red-600 px-3 py-2">Transfer Game</a>
+                <a href="#quiz" class="text-gray-600 hover:text-red-600 px-3 py-2">Quiz Time</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Introduction -->
+        <section class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-4 text-gray-900">Feeling Hot (and Cold!)</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Why does a cup of hot chocolate feel warm and an ice cream feel cold? It's all about heat and temperature! Let's investigate how heat moves and how we measure it.</p>
+        </section>
+
+        <!-- Lesson Section -->
+        <section id="lesson" class="mb-16">
+            <h2 class="text-4xl font-bold text-center mb-10">Heat vs. Temperature</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+                <!-- Heat -->
+                <div class="card bg-orange-50 border-orange-200">
+                    <h3 class="text-3xl font-semibold mb-4 text-orange-800">🔥 Heat</h3>
+                    <p class="mb-4">Heat is a type of <span class="font-bold">energy</span>. It's the energy that makes things feel warm. When you heat something up, you are adding energy to it!</p>
+                </div>
+
+                <!-- Temperature -->
+                <div class="card bg-sky-50 border-sky-200">
+                    <h3 class="text-3xl font-semibold mb-4 text-sky-800">🌡️ Temperature</h3>
+                    <p class="mb-4">Temperature is the <span class="font-bold">measurement</span> of how hot or cold something is. We use a thermometer to measure it in degrees, like Celsius (°C).</p>
+                </div>
+            </div>
+            
+            <h2 class="text-4xl font-bold text-center mb-10">How Heat Travels</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Conduction -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-800">🤝 Conduction (By Touch)</h3>
+                    <p>This is when heat travels through something solid. Imagine a metal spoon in a cup of hot soup. The heat travels up the spoon from particle to particle until the handle feels warm.</p>
+                    <p class="mt-4 font-semibold">Examples: A hot pan on the stove, your hand warming up a cold glass.</p>
+                </div>
+
+                <!-- Convection -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-green-800">💨 Convection (By Flow)</h3>
+                    <p>This is how heat moves through liquids and gases. When you boil water, the hot water at the bottom rises, and the cooler water at the top sinks to get heated. This creates a circular flow called a convection current.</p>
+                     <p class="mt-4 font-semibold">Examples: Boiling water, wind (sea breeze/land breeze).</p>
+                </div>
+                
+                <!-- Radiation -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-800">☀️ Radiation (By Waves)</h3>
+                    <p>This is heat that travels in waves through space. It doesn't need anything to touch! It's how we feel the warmth of the sun, even though it's millions of kilometers away.</p>
+                     <p class="mt-4 font-semibold">Examples: The Sun's warmth, heat from a campfire.</p>
+                </div>
+            </div>
+
+             <!-- Key Temperatures -->
+             <div class="card max-w-4xl mx-auto mt-12">
+                 <h3 class="text-3xl font-semibold mb-4 text-center">Important Temperatures to Know</h3>
+                <div class="flex justify-around text-center">
+                    <div>
+                        <p class="text-5xl font-bold text-sky-600">0°C</p>
+                        <p class="text-lg">Freezing Point of Water</p>
+                        <p>(When water turns into solid ice)</p>
+                    </div>
+                     <div>
+                        <p class="text-5xl font-bold text-red-600">100°C</p>
+                        <p class="text-lg">Boiling Point of Water</p>
+                        <p>(When water turns into gas/steam)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="game" class="mb-16 card">
+            <h2 class="text-4xl font-bold text-center mb-2">Game: Heat Transfer Detective!</h2>
+            <p class="text-center text-gray-600 mb-8">Read the clue and decide how the heat is moving!</p>
+            
+            <div id="game-container" class="max-w-2xl mx-auto">
+                <div id="game-scenario-box" class="game-scenario text-center mb-6">
+                    <p id="game-scenario-text" class="text-2xl font-semibold">Loading clue...</p>
+                </div>
+                <div id="game-options" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Game options will be generated here -->
+                </div>
+                <div class="text-center mt-6">
+                     <p id="game-feedback" class="h-6 mb-4 text-lg font-semibold"></p>
+                     <button id="next-question-btn" class="bg-red-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-red-700 transition hidden">Next Clue</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="card">
+            <h2 class="text-4xl font-bold text-center mb-8">Final Heat Challenge!</h2>
+            <div id="quiz-container" class="space-y-6">
+                <div class="quiz-question">
+                    <p class="text-xl font-semibold mb-3">1. What do we use to measure temperature?</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="1" data-answer="a">A) A ruler</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="1" data-answer="b">B) A thermometer</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="1" data-answer="c">C) A clock</button>
+                    </div>
+                </div>
+                <div class="quiz-question">
+                    <p class="text-xl font-semibold mb-3">2. How does the heat from a campfire reach you when you stand nearby?</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="2" data-answer="a">A) Conduction</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="2" data-answer="b">B) Convection</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="2" data-answer="c">C) Radiation</button>
+                    </div>
+                </div>
+                 <div class="quiz-question">
+                    <p class="text-xl font-semibold mb-3">3. At what temperature does water start to boil and turn into steam?</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                         <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="3" data-answer="a">A) 0°C</button>
+                         <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="3" data-answer="b">B) 50°C</button>
+                         <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="3" data-answer="c">C) 100°C</button>
+                    </div>
+                </div>
+            </div>
+             <div class="text-center mt-8">
+                <p id="quiz-result" class="text-2xl font-bold"></p>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 The Heat Zone. Stay curious!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- INTERACTIVE GAME LOGIC ---
+            const gameScenarios = [
+                { clue: "You touch a hot stove by accident and pull your hand away. Ouch!", correct: "Conduction" },
+                { clue: "Hot air from a heater warms up an entire room.", correct: "Convection" },
+                { clue: "Getting a sunburn at the beach.", correct: "Radiation" },
+                { clue: "An iron makes a shirt smooth by pressing against it.", correct: "Conduction" },
+                { clue: "A hot air balloon rises into the sky.", correct: "Convection" },
+                { clue: "Warming your hands over a fire without touching it.", correct: "Radiation" }
+            ];
+            const allOptions = ["Conduction", "Convection", "Radiation"];
+            let currentGameIndex = 0;
+
+            const scenarioText = document.getElementById('game-scenario-text');
+            const gameOptionsContainer = document.getElementById('game-options');
+            const gameFeedback = document.getElementById('game-feedback');
+            const nextBtn = document.getElementById('next-question-btn');
+            
+            function loadGameScenario(index) {
+                const scenario = gameScenarios[index];
+                scenarioText.textContent = scenario.clue;
+                gameOptionsContainer.innerHTML = '';
+                gameFeedback.textContent = '';
+                nextBtn.classList.add('hidden');
+
+                allOptions.forEach(optionText => {
+                    const button = document.createElement('button');
+                    button.textContent = optionText;
+                    button.className = "game-option p-4 text-lg border-2 border-gray-300 rounded-lg hover:bg-gray-100 transition";
+                    button.onclick = () => checkGameAnswer(optionText, scenario.correct);
+                    gameOptionsContainer.appendChild(button);
+                });
+            }
+
+            function checkGameAnswer(selected, correct) {
+                const buttons = gameOptionsContainer.querySelectorAll('.game-option');
+                
+                buttons.forEach(button => {
+                    if (button.textContent === selected) {
+                        if (selected === correct) {
+                            button.classList.add('correct');
+                            gameFeedback.textContent = "Exactly! You solved the case!";
+                            gameFeedback.className = "h-6 mb-4 text-lg font-semibold text-green-600";
+                        } else {
+                            button.classList.add('incorrect');
+                            gameFeedback.textContent = "Not quite! Think about how the heat is traveling.";
+                            gameFeedback.className = "h-6 mb-4 text-lg font-semibold text-red-600";
+                        }
+                    }
+                    if (button.textContent === correct) {
+                         button.classList.add('correct');
+                    }
+                    button.disabled = true;
+                });
+                
+                nextBtn.classList.remove('hidden');
+            }
+            
+            nextBtn.addEventListener('click', () => {
+                currentGameIndex++;
+                if (currentGameIndex >= gameScenarios.length) {
+                    currentGameIndex = 0; // Loop back to the start
+                }
+                loadGameScenario(currentGameIndex);
+            });
+
+
+            // --- QUIZ LOGIC ---
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            const quizResult = document.getElementById('quiz-result');
+            const correctAnswers = { 1: 'b', 2: 'c', 3: 'c' };
+            let score = 0;
+            let questionsAnswered = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            quizOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const question = option.dataset.question;
+                    const answer = option.dataset.answer;
+                    
+                    const questionButtons = document.querySelectorAll(`.quiz-option[data-question="${question}"]`);
+                    if (questionButtons[0].disabled) return;
+                    
+                    questionsAnswered++;
+
+                    if (answer === correctAnswers[question]) {
+                        option.classList.add('correct');
+                        score++;
+                    } else {
+                        option.classList.add('incorrect');
+                        document.querySelector(`.quiz-option[data-question="${question}"][data-answer="${correctAnswers[question]}"]`).classList.add('correct');
+                    }
+                    
+                    questionButtons.forEach(btn => btn.disabled = true);
+                    
+                    if (questionsAnswered === totalQuestions) {
+                        quizResult.textContent = `You scored ${score} out of ${totalQuestions}! You're a heat expert!`;
+                        quizResult.className = `text-2xl font-bold ${score === totalQuestions ? 'text-green-600' : 'text-red-700'}`;
+                    }
+                });
+            });
+            
+            // Initial game load
+            loadGameScenario(currentGameIndex);
+        });
+    </script>
+</body>
+</html>
