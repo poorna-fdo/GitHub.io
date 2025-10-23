@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Interactive Lesson on the Atmosphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .quiz-option.correct, .game-option.correct {
+            background-color: #d1fae5;
+            border-color: #10b981;
+        }
+        .quiz-option.incorrect, .game-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .game-scenario {
+            background-color: #f3f4f6;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border: 2px solid #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-sky-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-sky-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 inline-block mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
+                </svg>
+                Atmosphere Adventure
+            </div>
+            <div>
+                <a href="#lesson" class="text-gray-600 hover:text-sky-600 px-3 py-2">The Lesson</a>
+                <a href="#game" class="text-gray-600 hover:text-sky-600 px-3 py-2">Layer Game</a>
+                <a href="#quiz" class="text-gray-600 hover:text-sky-600 px-3 py-2">Quiz Time</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Introduction -->
+        <section class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-4 text-gray-900">Earth's Invisible Shield!</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Did you know we live inside a giant bubble of air? It's called the atmosphere, and it protects us every day. Let's blast off and explore it layer by layer!</p>
+        </section>
+
+        <!-- Lesson Section -->
+        <section id="lesson" class="mb-16">
+            <h2 class="text-4xl font-bold text-center mb-10">The 5 Layers of the Sky</h2>
+            <div class="space-y-6 max-w-4xl mx-auto">
+                <!-- Troposphere -->
+                <div class="card flex items-center gap-6">
+                    <p class="text-5xl">🌍</p>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-800">1. Troposphere</h3>
+                        <p>This is the layer we live in! It has most of the air and is where all our weather happens – clouds, rain, and wind. Airplanes fly here too.</p>
+                    </div>
+                </div>
+                <!-- Stratosphere -->
+                <div class="card flex items-center gap-6">
+                    <p class="text-5xl">🛡️</p>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-indigo-800">2. Stratosphere</h3>
+                        <p>This layer contains a special shield called the <span class="font-bold">Ozone Layer</span>. It protects us from the Sun's harmful ultraviolet (UV) rays. Jet planes fly here because the air is very calm.</p>
+                    </div>
+                </div>
+                <!-- Mesosphere -->
+                <div class="card flex items-center gap-6">
+                    <p class="text-5xl">☄️</p>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-purple-800">3. Mesosphere</h3>
+                        <p>This is the "meteor destroyer" layer! When space rocks (meteors) head for Earth, they burn up here, creating shooting stars. It's also the coldest layer.</p>
+                    </div>
+                </div>
+                <!-- Thermosphere -->
+                <div class="card flex items-center gap-6">
+                    <p class="text-5xl">🛰️</p>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-pink-800">4. Thermosphere</h3>
+                        <p>It's very hot up here! This layer is home to the International Space Station and beautiful lights called the Aurora Borealis (Northern Lights).</p>
+                    </div>
+                </div>
+                <!-- Exosphere -->
+                 <div class="card flex items-center gap-6">
+                    <p class="text-5xl">🚀</p>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800">5. Exosphere</h3>
+                        <p>The final frontier! This is the outermost layer where the atmosphere fades into outer space. Some satellites orbit here.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="text-4xl font-bold text-center mb-10 mt-16">What's in the Air We Breathe?</h2>
+            <div class="card max-w-2xl mx-auto text-center">
+                 <p class="text-lg">The air is mostly made of two main gases:</p>
+                <div class="mt-4">
+                    <p class="text-4xl font-bold text-blue-600">78% Nitrogen</p>
+                    <p class="text-4xl font-bold text-green-600">21% Oxygen</p>
+                    <p class="text-lg text-gray-600 mt-2">...and a tiny bit of other gases like Argon and Carbon Dioxide!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="game" class="mb-16 card">
+            <h2 class="text-4xl font-bold text-center mb-2">Game: Name That Layer!</h2>
+            <p class="text-center text-gray-600 mb-8">Read the fact and click on the correct layer of the atmosphere.</p>
+            
+            <div id="game-container" class="max-w-2xl mx-auto">
+                <div id="game-scenario-box" class="game-scenario text-center mb-6">
+                    <p id="game-scenario-text" class="text-2xl font-semibold">Loading fact...</p>
+                </div>
+                <div id="game-options" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <!-- Game options will be generated here -->
+                </div>
+                <div class="text-center mt-6">
+                     <p id="game-feedback" class="h-6 mb-4 text-lg font-semibold"></p>
+                     <button id="next-question-btn" class="bg-sky-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-sky-700 transition hidden">Next Fact</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="card">
+            <h2 class="text-4xl font-bold text-center mb-8">Final Atmosphere Quiz!</h2>
+            <div id="quiz-container" class="space-y-6">
+                <div class="quiz-question">
+                    <p class="text-xl font-semibold mb-3">1. Which layer of the atmosphere do we live in?</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="1" data-answer="a">A) Stratosphere</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="1" data-answer="b">B) Troposphere</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="1" data-answer="c">C) Mesosphere</button>
+                    </div>
+                </div>
+                <div class="quiz-question">
+                    <p class="text-xl font-semibold mb-3">2. The ozone layer, which protects us from the sun's harmful rays, is in the...</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="2" data-answer="a">A) Stratosphere</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="2" data-answer="b">B) Exosphere</button>
+                        <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="2" data-answer="c">C) Thermosphere</button>
+                    </div>
+                </div>
+                 <div class="quiz-question">
+                    <p class="text-xl font-semibold mb-3">3. What is the most common gas in the air we breathe?</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                         <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="3" data-answer="a">A) Oxygen</button>
+                         <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="3" data-answer="b">B) Carbon Dioxide</button>
+                         <button class="quiz-option p-3 text-left border-2 border-gray-200 rounded-lg hover:bg-gray-100" data-question="3" data-answer="c">C) Nitrogen</button>
+                    </div>
+                </div>
+            </div>
+             <div class="text-center mt-8">
+                <p id="quiz-result" class="text-2xl font-bold"></p>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 Atmosphere Adventure. Keep looking up!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- INTERACTIVE GAME LOGIC ---
+            const gameScenarios = [
+                { fact: "All the weather you see happens here.", correct: "Troposphere" },
+                { fact: "The International Space Station orbits in this very hot layer.", correct: "Thermosphere" },
+                { fact: "Meteors burn up in this layer, creating shooting stars.", correct: "Mesosphere" },
+                { fact: "This layer contains the ozone layer that acts like sunscreen for Earth.", correct: "Stratosphere" },
+                { fact: "This is the final layer before outer space.", correct: "Exosphere" },
+                { fact: "You can find airplanes and clouds in this layer.", correct: "Troposphere" }
+            ];
+            const allOptions = ["Troposphere", "Stratosphere", "Mesosphere", "Thermosphere", "Exosphere"];
+            let currentGameIndex = 0;
+
+            const scenarioText = document.getElementById('game-scenario-text');
+            const gameOptionsContainer = document.getElementById('game-options');
+            const gameFeedback = document.getElementById('game-feedback');
+            const nextBtn = document.getElementById('next-question-btn');
+            
+            function loadGameScenario(index) {
+                const scenario = gameScenarios[index];
+                scenarioText.textContent = scenario.fact;
+                gameOptionsContainer.innerHTML = '';
+                gameFeedback.textContent = '';
+                nextBtn.classList.add('hidden');
+
+                // Shuffle options to make it more interesting
+                const shuffledOptions = [...allOptions].sort(() => Math.random() - 0.5);
+
+                shuffledOptions.forEach(optionText => {
+                    const button = document.createElement('button');
+                    button.textContent = optionText;
+                    button.className = "game-option p-4 text-lg border-2 border-gray-300 rounded-lg hover:bg-gray-100 transition";
+                    button.onclick = () => checkGameAnswer(optionText, scenario.correct);
+                    gameOptionsContainer.appendChild(button);
+                });
+            }
+
+            function checkGameAnswer(selected, correct) {
+                const buttons = gameOptionsContainer.querySelectorAll('.game-option');
+                
+                buttons.forEach(button => {
+                    if (button.textContent === selected) {
+                        if (selected === correct) {
+                            button.classList.add('correct');
+                            gameFeedback.textContent = "That's right! Excellent!";
+                            gameFeedback.className = "h-6 mb-4 text-lg font-semibold text-green-600";
+                        } else {
+                            button.classList.add('incorrect');
+                            gameFeedback.textContent = "Not quite! Think about each layer's special job.";
+                            gameFeedback.className = "h-6 mb-4 text-lg font-semibold text-red-600";
+                        }
+                    }
+                    if (button.textContent === correct) {
+                         button.classList.add('correct');
+                    }
+                    button.disabled = true;
+                });
+                
+                nextBtn.classList.remove('hidden');
+            }
+            
+            nextBtn.addEventListener('click', () => {
+                currentGameIndex++;
+                if (currentGameIndex >= gameScenarios.length) {
+                    currentGameIndex = 0; // Loop back to the start
+                }
+                loadGameScenario(currentGameIndex);
+            });
+
+
+            // --- QUIZ LOGIC ---
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            const quizResult = document.getElementById('quiz-result');
+            const correctAnswers = { 1: 'b', 2: 'a', 3: 'c' };
+            let score = 0;
+            let questionsAnswered = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            quizOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const question = option.dataset.question;
+                    const answer = option.dataset.answer;
+                    
+                    const questionButtons = document.querySelectorAll(`.quiz-option[data-question="${question}"]`);
+                    if (questionButtons[0].disabled) return;
+                    
+                    questionsAnswered++;
+
+                    if (answer === correctAnswers[question]) {
+                        option.classList.add('correct');
+                        score++;
+                    } else {
+                        option.classList.add('incorrect');
+                        document.querySelector(`.quiz-option[data-question="${question}"][data-answer="${correctAnswers[question]}"]`).classList.add('correct');
+                    }
+                    
+                    questionButtons.forEach(btn => btn.disabled = true);
+                    
+                    if (questionsAnswered === totalQuestions) {
+                        quizResult.textContent = `You scored ${score} out of ${totalQuestions}! You're an atmosphere expert!`;
+                        quizResult.className = `text-2xl font-bold ${score === totalQuestions ? 'text-green-600' : 'text-sky-700'}`;
+                    }
+                });
+            });
+            
+            // Initial game load
+            loadGameScenario(currentGameIndex);
+        });
+    </script>
+</body>
+</html>
